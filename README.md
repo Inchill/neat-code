@@ -1,2 +1,2 @@
-# clean-code
-A repository of clean code.
+# neat-code
+A repository of neat code.
