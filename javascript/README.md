@@ -1,1 +1,0 @@
-# clean code of javascript

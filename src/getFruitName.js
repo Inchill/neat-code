@@ -1,6 +1,6 @@
-# if-else-optimization
+// if-else-optimization
 
-## bad
+//  bad
 
 ```js
 function getFruitName (type) {
@@ -16,7 +16,7 @@ function getFruitName (type) {
 }
 ```
 
-## good
+// good
 
 ```js
 function getFruitName (type) {
