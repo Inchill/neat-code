@@ -1,0 +1,30 @@
+{
+  "name": "neat-code",
+  "version": "1.0.0",
+  "description": "a javascript tools lib",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inchill/neat-code.git"
+  },
+  "keywords": [
+    "javascript",
+    "function",
+    "tool"
+  ],
+  "author": "Inchill",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Inchill/neat-code/issues"
+  },
+  "homepage": "https://github.com/Inchill/neat-code#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
