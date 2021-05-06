@@ -14,3 +14,5 @@ function getRandom (min, max, decimal = 0) {
 }
 
 console.log(getRandom(1, 1000))
+
+module.exports = getRandom
