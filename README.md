@@ -1,3 +1,3 @@
 # neat-code
 
-A repository of neat javascript code.
+A repository of common javascript utils.

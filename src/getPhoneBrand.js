@@ -1,6 +1,6 @@
 /**
  * 
- * @param {*} ua 
+ * @param {*} ua userAgent
  * 根据手机浏览器 userAgent 判断是否是华为、小米、OPPO、vivo、iOS或者其他
  */
 function getBrand (ua) {
@@ -17,3 +17,5 @@ function getBrand (ua) {
   }
   return 'other'
 }
+
+module.exports = getBrand

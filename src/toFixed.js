@@ -1,8 +1,8 @@
 
 /**
- * 四舍五入，为 0 不显示
- * @param {*} n 一个数
- * @param {*} m 保留的位数
+ * rounding a number，if result is zero, do not show the decimal
+ * @param {number} n
+ * @param {number} m
  */
 function toFixed (n, m = 2) {
   if (typeof n !== 'number') {

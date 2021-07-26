@@ -5,8 +5,12 @@
  * 实际上这个随机字符串并不安全，不能用于实际开发中。
  */
 
+const getBrand = require("./getPhoneBrand")
+
 function genRandID () {
   return Math.random().toString(36).substring(2)
 }
 
 console.log(genRandID())
+
+module.exports = getBrand

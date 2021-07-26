@@ -1,8 +1,8 @@
 /**
- * 
+ * semver version comparation.
  * @param {string} v1 
  * @param {string} v2 
- * @returns {number} 1 v1 大于 v2，0 等于，-1 小于
+ * @returns {number} 1 v1 more than v2，0 eaual，-1 less than
  */
 function compareVersion (v1, v2) {
   v1 = v1.split('.')
