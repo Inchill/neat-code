@@ -4,7 +4,7 @@
   "description": "a javascript tools lib",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "jest"
   },
   "scripts": {
     "test": "jest"
