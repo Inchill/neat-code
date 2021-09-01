@@ -6,10 +6,13 @@ let str = '<1. 活动对象：2021年7月16日至2021年7月31日\n活动期间�
   obj = {
     name: 'Mike'
   },
-  arr = [1, 2, 3],
+  arr = [1, 2, 3, undefined, function print () { console.log('print') }, Symbol(6) ], // JSON => [1, 2, 3, null, null, null]
   undef = undefined,
   nil = null,
-  symbol = Symbol(1)
+  symbol = Symbol(1),
+  print = function () {
+    console.log('function print')
+  }
 
 describe('isJSON', () => {
 
@@ -71,7 +74,7 @@ describe('isJSON', () => {
     expect(() => {
       // Note: You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
       isJSON(undef)
-    }).toThrow(new Error('JSON does not support undefined and symbol.'))
+    }).toThrow(new Error('JSON does not support undefined, symbol and function.'))
   })
 
   test('throws an error', () => {
@@ -79,14 +82,14 @@ describe('isJSON', () => {
     expect(() => {
       // Note: You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
       isJSON(undef)
-    }).toThrow(new Error('JSON does not support undefined and symbol.'))
+    }).toThrow(new Error('JSON does not support undefined, symbol and function.'))
   })
 
   test('throws an error', () => {
     expect(() => {
       // Note: You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
       isJSON(symbol)
-    }).toThrow(new Error('JSON does not support undefined and symbol.'))
+    }).toThrow(new Error('JSON does not support undefined, symbol and function.'))
   })
 
   test('throws an error', () => {
@@ -95,5 +98,18 @@ describe('isJSON', () => {
       // Note: You must wrap the code in a function, otherwise the error will not be caught and the assertion will fail.
       isJSON(symbol)
     }).toThrow()
+  })
+
+  test('throws an error', () => {
+    expect(() => {
+      isJSON(print)
+    }).toThrow(new Error('JSON does not support undefined, symbol and function.'))
+  })
+
+  test('throws an error', () => {
+    print = JSON.stringify(print)
+    expect(() => {
+      isJSON(print)
+    }).toThrow(new Error('JSON does not support undefined, symbol and function.'))
   })
 })
